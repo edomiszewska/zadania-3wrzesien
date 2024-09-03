@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zadania</title>
+</head>
+<body>
+    <form>
+        <label for="gosc">goscie
+        <input type="text" name="gosc" id="gosc"></label><br>
+
+        poprawiny<label for="poprawiny">
+        <input type="checkbox" name="poprawiny" id="poprawiny">
+        </label>
+
+        <p id="display"></p>
+    </form>    
+
+
+<script>
+
+const form=document.querySelector('form')
+const gosc=document.querySelector('#gosc')
+const poprawiny=document.querySelector('#poprawiny')
+const display=document.querySelector('#display')
+
+form.addEventListener('change',  function(evt){
+let wartosc=gosc.value
+if(isNaN(wartosc)){
+display.innerHTML="to nie jest liczba"
+}else{
+    let suma=parseInt(wartosc)*100
+
+if(poprawiny.checked){
+    
+    suma*=1.3
+}display.innerHTML=`koszt: ${suma}`
+}
+
+evt.preventDefault();
+
+
+}
+
+)
+    
+
+
+</script>
+
+
+
+
+</body>
+</html>
