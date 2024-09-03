@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zadania</title>
+</head>
+<body>
+    <form>
+        <label>liczba 1<input type="text" id="licz1" name="licz1"></label><br>
+        <label>liczba 2<input type="text" id="licz2" name="licz2"></label><br>
+
+        <button id="dod">+</button><br>
+        <button id="odej">-</button><br>
+        <button id="razy">*</button><br>
+        <button id="dzielenie">/</button><br>
+        <button id="reszta">reszta z dzielenia</button><br>
+        <button id="calkowite">dzielenie całkowite</button><br>
+        <p id="display"> </p>
+
+    <script>
+        
+    const liczba1=document.querySelector('#licz1')
+    const liczba2=document.querySelector('#licz2')
+    const dodawanie=document.querySelector('#dod')    
+    const odejmowanie=document.querySelector('#odej')    
+    const mnozenie=document.querySelector('#razy')    
+    const dzielenie=document.querySelector('#dzielenie')  
+    const reszta=document.querySelector('#reszta')    
+    const calkowite=document.querySelector('#calkowite')      
+    const display=document.querySelector('#display')
+    
+    dodawanie.addEventListener('click',  function(evt){
+    let wartosc=liczba1.value
+    let wartosc2=liczba2.value
+    if(isNaN(wartosc,wartosc2)){
+    display.innerHTML="to nie jest liczba"
+    }else{
+    let suma=parseFloat(wartosc)+parseFloat(wartosc2)
+    display.innerHTML=`wynik to ${suma}`
+    }
+    evt.preventDefault();
+    })
+
+    odejmowanie.addEventListener('click',  function(evt){
+    let wartosc=liczba1.value
+    let wartosc2=liczba2.value
+    if(isNaN(wartosc,wartosc2)){
+    display.innerHTML="to nie jest liczba"
+    }else{
+    let suma=parseFloat(wartosc)-parseFloat(wartosc2)
+    display.innerHTML=`wynik to ${suma}`
+    }
+    evt.preventDefault();
+    })
+    
+    mnozenie.addEventListener('click',  function(evt){
+    let wartosc=liczba1.value
+    let wartosc2=liczba2.value
+    if(isNaN(wartosc,wartosc2)){
+    display.innerHTML="to nie jest liczba"
+    }else{
+    let suma=parseFloat(wartosc)*parseFloat(wartosc2)
+    display.innerHTML=`wynik to ${suma}`
+    }
+    evt.preventDefault();
+    })
+
+    dzielenie.addEventListener('click',  function(evt){
+    let wartosc=liczba1.value
+    let wartosc2=liczba2.value
+    if(isNaN(wartosc,wartosc2)){
+    display.innerHTML="to nie jest liczba"
+    }else{
+    let suma=parseFloat(wartosc)/parseFloat(wartosc2)
+    display.innerHTML=`wynik to ${suma}`
+    }
+    evt.preventDefault();
+    })
+
+
+    reszta.addEventListener('click',  function(evt){
+    let wartosc=liczba1.value
+    let wartosc2=liczba2.value
+    if(isNaN(wartosc,wartosc2)){
+    display.innerHTML="to nie jest liczba"
+    }else{
+    let suma=parseFloat(wartosc)%parseFloat(wartosc2)
+    display.innerHTML=`wynik to ${suma}`
+    }
+    evt.preventDefault();
+    })
+
+    calkowite.addEventListener('click',  function(evt){
+    let wartosc=liczba1.value
+    let wartosc2=liczba2.value
+    if(isNaN(wartosc,wartosc2)){
+    display.innerHTML="to nie jest liczba"
+    }else
+    {if(wartosc2==0){
+        display.innerHTML="nie dzielimy przez 0!"
+    }else{
+          let suma=parseFloat(wartosc)/parseFloat(wartosc2)
+    display.innerHTML=`wynik to ${suma}`
+    }
+  
+    }
+    evt.preventDefault();
+    })
+
+    </script>
+
+
+    </form>
+
+
+</body>
+</html>
