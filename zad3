@@ -71,9 +71,14 @@
     let wartosc2=liczba2.value
     if(isNaN(wartosc,wartosc2)){
     display.innerHTML="to nie jest liczba"
+    }else
+    {if(wartosc2==0){
+        display.innerHTML="nie dzielimy przez 0!"
     }else{
-    let suma=parseFloat(wartosc)/parseFloat(wartosc2)
+          let suma=parseFloat(wartosc)/parseFloat(wartosc2)
     display.innerHTML=`wynik to ${suma}`
+    }
+  
     }
     evt.preventDefault();
     })
@@ -84,9 +89,14 @@
     let wartosc2=liczba2.value
     if(isNaN(wartosc,wartosc2)){
     display.innerHTML="to nie jest liczba"
+    }else
+    {if(wartosc2==0){
+        display.innerHTML="nie dzielimy przez 0!"
     }else{
-    let suma=parseFloat(wartosc)%parseFloat(wartosc2)
+          let suma=parseFloat(wartosc)%parseFloat(wartosc2)
     display.innerHTML=`wynik to ${suma}`
+    }
+  
     }
     evt.preventDefault();
     })
@@ -100,7 +110,7 @@
     {if(wartosc2==0){
         display.innerHTML="nie dzielimy przez 0!"
     }else{
-          let suma=parseFloat(wartosc)/parseFloat(wartosc2)
+          let suma=parseInt(parseFloat(wartosc)/parseFloat(wartosc2))
     display.innerHTML=`wynik to ${suma}`
     }
   
