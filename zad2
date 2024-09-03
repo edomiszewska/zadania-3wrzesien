@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zadania</title>
+</head>
+<body>
+    <form>
+        <label for="ilosc">ilośc km
+        <input type="text" name="ilosc" id="ilosc"></label><br>
+
+        Jestem z Gdańska<label for="gdansk">
+        <input type="checkbox" name="gdansk" id="gdansk">
+        </label>
+
+        <p id="display"></p>
+    </form>    
+
+
+<script>
+
+const form=document.querySelector('form')
+const ilosc=document.querySelector('#ilosc')
+const gdansk=document.querySelector('#gdansk')
+const display=document.querySelector('#display')
+
+form.addEventListener('change',  function(evt){
+let wartosc=ilosc.value
+if(isNaN(wartosc)){
+display.innerHTML="to nie jest liczba"
+}else{
+    let suma=parseInt(wartosc)*1*2
+
+if(gdansk.checked){
+    
+    display.innerHTML="Dowieziemy pizze za darmo"
+    
+}else{
+    display.innerHTML=`koszt: ${suma}zł`
+}}
+
+evt.preventDefault();
+
+
+}
+
+)
+    
+
+
+</script>
+
+
+
+
+</body>
+</html>
