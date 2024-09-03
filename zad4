@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zad4</title>
+</head>
+<body>
+    <form>
+        <label><input type="text" name="tekst1"id="tekst1"></label><input type="checkbox" name="check1" id="check1"><br>
+        <label><input type="text" name="tekst2" id="tekst2"></label><input type="checkbox" name="check2" id="check2"><br>
+        <label><input type="text" name="tekst3" id="tekst3"></label><input type="checkbox" name="check3" id="check3"><br>
+        <label><input type="text" name="tekst4" id="tekst4"></label><input type="checkbox" name="check4" id="check4"><br>
+        <label><input type="text" name="tekst5" id="tekst5"></label><input type="checkbox" name="check5" id="check5"><br>
+        <p id="display"></p>
+    </form>
+
+<script>
+const form=document.querySelector("form")
+const tekst1=document.querySelector("#tekst1")
+const tekst2=document.querySelector("#tekst2")
+const tekst3=document.querySelector("#tekst3")
+const tekst4=document.querySelector("#tekst4")
+const tekst5=document.querySelector("#tekst5")
+const check1=document.querySelector("#check1")
+const check2=document.querySelector("#check2")
+const check3=document.querySelector("#check3")
+const check4=document.querySelector("#check4")
+const check5=document.querySelector("#check5")
+const display=document.querySelector("#display")
+
+
+form.addEventListener('change',  function(evt){
+let wartosc=tekst1.value
+let wartosc2=tekst2.value
+let wartosc3=tekst3.value
+let wartosc4=tekst4.value
+let wartosc5=tekst5.value
+
+
+if(isNaN(wartosc)&&(wartosc2)&&(wartosc3)&&(wartosc4)&&(wartosc5)){
+display.innerHTML="to nie jest liczba"
+}else{
+    let suma=0
+
+if(check1.checked){
+    
+    if(wartosc%1==0){
+        suma+=parseInt(wartosc)
+    }else{
+        display.innerHTML="nie jest calkowita"
+    }
+    
+}
+
+if(check2.checked){
+    
+    if(wartosc2%1==0){
+        suma+=parseInt(wartosc2)
+    }else{
+        display.innerHTML="nie jest calkowita"
+    }
+    
+}
+    
+
+if(check3.checked){
+    
+    if(wartosc3%1==0){
+        suma+=parseInt(wartosc3)
+    }else{
+        display.innerHTML="nie jest calkowita"
+    }
+    
+}if(check4.checked){
+    
+    if(wartosc4%1==0){
+        suma+=parseInt(wartosc4)
+    }else{
+        display.innerHTML="nie jest calkowita"
+    }
+    
+}if(check5.checked){
+    
+    if(wartosc5%1==0){
+        suma+=parseInt(wartosc5)
+    }else{
+        display.innerHTML="nie jest calkowita"
+    }
+    
+}
+evt.preventDefault();
+
+display.innerHTML=`wynik to ${suma}`
+}}
+
+)
+
+</script>
+
+
+
+</body>
+</html>
