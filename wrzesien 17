@@ -23,4 +23,36 @@ echo "$tablica[$e] <br>";
 ?>
 
 
-2.
+2. program ktory wyszukuje konkretne elementy, podajemy wartosc do wyszukania i pokazuje ile razy sie znajduje tam.
+
+
+<?php
+//czy jest dany element w tablicy
+
+
+$tablica=[];
+for ($i=0;$i<20;$i++){
+	array_push($tablica, rand(1,20));
+	
+
+}
+
+$szukam=5;
+
+$licz=0;
+
+ for ($e=0;$e<count($tablica);$e++){
+		if ($tablica[$e]==$szukam){
+			echo "To jest szukana liczba:  $szukam <br>";$licz++;
+		}
+		echo "$tablica[$e] <br>";
+	}
+
+	echo "I wystepuje $licz razy";
+
+
+?>
+
+
+
+3.
