@@ -55,4 +55,59 @@ $licz=0;
 
 
 
-3.
+1. skrypt ktory losuje 10 liczb z zakresu <1,20> oblicz ich srednia arytmetyczna,wynik i wylosowane liczby w oknie przegladarki
+2. skrypt ktoryza pomoca petli sposrod liczb 1do 100 wyszuka liczby nieparzyste  podzielne przez 3 
+3.skrypt sprawdzajacy czy pierwsza zmienna jest podzielna przez druga na ekranie wypisuje stosowny komunikat.
+
+
+<?php
+//Domiszewska Emilia 5i
+
+//z1
+
+
+$tablica=[];
+$suma=0;
+for ($i=0;$i<10;$i++){
+	$liczenie= rand(1,20);
+	array_push($tablica, $liczenie);
+	$suma+=$liczenie;
+
+	 echo "$tablica[$i] <br>";
+
+
+}
+	$srednia=$suma/10;
+			echo "to jest srednia $srednia <br>";
+			
+		
+//z2
+
+$tablica=[];
+for ($i=0;$i<=100;$i++){
+	array_push($tablica, rand(1,100));
+	  if($i%2==1 && $i%3==0 ){
+		echo " to jest liczba nieparzysta i podzielna prez 3: $i <br>";
+	  }
+
+	
+
+	
+}
+
+//z3
+$a=10;
+$b=2;
+
+if($a%$b==0){
+	echo "$a jest podzielna przez $b";
+
+}else{
+echo "$a nie jest podzielna przez $b";
+
+}
+
+?>
+
+
+
