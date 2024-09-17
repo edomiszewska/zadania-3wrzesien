@@ -1,0 +1,26 @@
+1. zadanko najmniejsza wartosc z tablicy
+<?php
+//najmniejszy element z tablicy
+
+$tablica=[];
+for ($i=0;$i<20;$i++){
+	array_push($tablica, rand(1,20));
+	
+}
+
+
+$minimum=$tablica[0];
+ for ($e=0;$e<count($tablica);$e++){
+	if ($tablica[$e]<$minimum){
+		$minimum=$tablica[$e];
+	}
+
+echo "$tablica[$e] <br>";
+ }
+ 
+ echo "to jest minimum: $minimum";
+
+?>
+
+
+2.
