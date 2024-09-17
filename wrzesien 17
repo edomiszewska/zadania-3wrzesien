@@ -54,7 +54,7 @@ $licz=0;
 ?>
 
 
-
+/////////////////TEST////////////////////
 1. skrypt ktory losuje 10 liczb z zakresu <1,20> oblicz ich srednia arytmetyczna,wynik i wylosowane liczby w oknie przegladarki
 2. skrypt ktoryza pomoca petli sposrod liczb 1do 100 wyszuka liczby nieparzyste  podzielne przez 3 
 3.skrypt sprawdzajacy czy pierwsza zmienna jest podzielna przez druga na ekranie wypisuje stosowny komunikat.
@@ -109,5 +109,38 @@ echo "$a nie jest podzielna przez $b";
 
 ?>
 
+
+3. program ktory przekonwertuje liczbe z systemu dziesitnego na binarny
+
+<?php
+
+echo decbin(7);
+
+?>
+
+lub
+
+<?php
+
+$liczba = 7; 
+$binarna = ''; 
+$liczba2=$liczba;
+
+//jesli liczba jest 0
+if ($liczba == 0) {
+    $binarna = '0'; // dla liczby 0
+} else {
+    // 
+    while ($liczba > 0) {
+        $reszta = $liczba % 2; 
+        $binarna = $reszta . $binarna; // dodaj resztę na początku
+        $liczba = intdiv($liczba, 2); // dzielenie całkowite przez 2 - intdiv funkcja dzielenia calkowitego
+    }
+}
+
+// wynik
+echo "Liczba $liczba2 jako binarna:  " . $binarna;
+
+?>
 
 
