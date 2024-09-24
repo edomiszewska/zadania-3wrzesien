@@ -144,3 +144,8 @@ echo "Liczba $liczba2 jako binarna:  " . $binarna;
 ?>
 
 
+
+
+
+
+
