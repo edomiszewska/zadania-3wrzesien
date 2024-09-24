@@ -145,3 +145,31 @@ echo "zaludnienie: ".$cos["zaludnienie"]." miejscowosc: ".$cos["miejscowosc"];
 
 
 ?>
+
+
+=======================
+in_array - najpierw poszukiwana wartosc, potem tablica, true i false ma
+
+9. SPRAWDZA Z FUNKCJA IN ARRAY
+<?php
+$tablica=array("jeden", "dwa", "trzy");
+if(in_array("jeden",$tablica)){
+    echo "Jest jeden";
+}else{
+    echo "nie ma jeden";
+}
+?>
+
+
+==================
+wordwrap - podzieleniem tekstu na kolumny
+np. echo wordwrap ($tekst, 20, "<br>", true);
+20-ile znakow w jednej linii
+
+
+strlen();- nie uwzglednia znakow narodowych
+mb_strlen();-rowniez znaki narodowe
+
+
+substr();
+
