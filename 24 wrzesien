@@ -9,5 +9,60 @@ $tab[$i]=rand(1,50);
 echo $tab[$i],",";
 }
 $dlugosc=count($tab);
-echo "<br> dlugosc tablicy wynosi:",$dlugosc;
+echo "<br> dlugosc tablicy wynosi:", $dlugosc;
+?>
+
+
+
+
+2. przejsc po wszystkich wyrazach tablicy i wypisac je
+
+<?php
+$tab=array("Poniedziałek","Wtorek","Środa","Czwartek", "Piątek", "Sobota", "Niedziela");
+
+foreach($tab as $item)
+{
+echo $item," ";
+}
+?>
+
+
+3. uzyc foreach i dodac 2 do kazdej liczby
+
+<?php
+$tab=array(3,9,1,2,4,8,7,5,3,1);
+echo "tablica przed dodawaniem: ";
+foreach($tabas $item)
+{
+echo $item.", ";
+}
+
+?>
+
+
+
+
+4. nieparzyste i parzyste
+
+<?php
+$tab=array(3,9,1,2,4,8,7,5,3,1);
+echo "tablica: <br>";
+foreach($tab as $item)
+{
+echo $item.", " ;
+
+}
+
+$parzysta=0;
+$nieparzysta=0;
+
+foreach($tab as $item){
+    if($item%2==0){
+        $parzysta++;
+    }else{
+        $nieparzysta++;
+    }
+
+}
+echo "parzyste:".$parzysta. " oraz nieparzysta".$nieparzysta;
 ?>
