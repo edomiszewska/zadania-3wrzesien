@@ -66,3 +66,27 @@ foreach($tab as $item){
 }
 echo "parzyste:".$parzysta. " oraz nieparzysta".$nieparzysta;
 ?>
+
+
+5. suma wszystkich elementow w tablicy
+
+<?php
+$tab=array(3,9,1,2,4,8,7,5,3,1);
+echo "tablica: <br>";
+foreach($tab as $item)
+{
+echo $item.", " ;
+
+}
+
+
+$suma=0;
+
+foreach($tab as $item)
+{
+$suma=$suma+$item;
+}
+
+echo "suma:" .$suma;
+
+?>
